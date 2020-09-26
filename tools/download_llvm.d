@@ -48,7 +48,7 @@ version (OSX)
 
     enum dstepLLVMArchives = [
         64: [
-            "10.0.0": "llvm-10.0.0-macos-x86_64.tar.xz"
+            "10.0.0": "clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz"
         ]
     ];
 
@@ -60,7 +60,7 @@ version (OSX)
     ];
 
     enum dstepLLVMUrls = [
-        "10.0.0": "https://github.com/jacob-carlborg/llvm-project/releases/download/dstep-%s/%s"
+        "10.0.0": "https://github.com/llvm/llvm-project/releases/download/llvmorg-%s/%s"
     ];
 }
 

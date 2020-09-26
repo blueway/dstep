@@ -43,7 +43,7 @@ jobs:
     - &deploy
       stage: deploy
       if: tag IS present
-      d: ldc
+      d: dmd
       os: linux
       env: LLVM_VERSION=8.0.0
       install: ./tools/download_llvm.d --dstep

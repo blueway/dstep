@@ -24,7 +24,7 @@ function configure {
 
 function build {
    sudo apt-get update
-   sudo apt-get install gcc-multilib g++-multilib libc6-dev-i386 linux-libc-dev:i386 libcurl4-gnutls-dev:i386
+   sudo apt-get install gcc-multilib g++-multilib libc6-dev-i386 linux-libc-dev:i386  
 
   
   dub build -b release --verror --arch=x86

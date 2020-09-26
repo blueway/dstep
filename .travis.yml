@@ -2,7 +2,7 @@ dist: xenial
 language: d
 d:
   - dmd
-  - ldc
+  #- ldc
 
 install: ./tools/download_llvm.d
 
@@ -17,7 +17,7 @@ script: dub test --verror --compiler=${DC}
 
 os:
   - linux
-  - osx
+  #- osx
 
 env:
   global: MACOSX_DEPLOYMENT_TARGET=10.9
@@ -30,14 +30,14 @@ env:
 matrix:
   include:
     # beta and nightly builds for DMD and LDC
-    - &entry
-      d: dmd-beta
-      os: linux
-      env: LLVM_VERSION=10.0.0
-    - <<: *entry
-      d: ldc-beta
-    - <<: *entry
-      d: dmd-nightly
+    #- &entry
+    #  d: dmd-beta
+    #  os: linux
+    #  env: LLVM_VERSION=10.0.0
+    #- <<: *entry
+    #  d: ldc-beta
+    #- <<: *entry
+    #  d: dmd-nightly
 
     # deployment
     - &deploy

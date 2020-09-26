@@ -56,12 +56,12 @@ jobs:
         tag_name: $TRAVIS_TAG
         file_glob: true
         file: dstep*.tar.xz
-        skip_cleanup: true
+        cleanup: true
         on:
           tags: true
-    - <<: *deploy
-      os: osx
-      before_install: brew install ncurses
+    #- <<: *deploy
+    #  os: osx
+    #  before_install: brew install ncurses
 
   allow_failures:
     - <<: *entry

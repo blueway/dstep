@@ -23,7 +23,7 @@ function configure {
 }
 
 function build {
-  dub build -b release --verror
+  dub build -b release --verror --arch=x86
   strip "$target_path"
 }
 

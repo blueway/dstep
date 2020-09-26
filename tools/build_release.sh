@@ -23,7 +23,10 @@ function configure {
 }
 
 function build {
+   sudo apt-get update
    sudo apt-get install gcc-multilib
+   sudo ln -s /usr/lib/x86_64-linux-gnu /usr/lib64
+
   dub build -b release --verror --arch=x86
   strip "$target_path"
 }

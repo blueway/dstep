@@ -25,8 +25,7 @@ function configure {
 function build {
    sudo apt-get update
    sudo apt-get install g++-multilib
-   sudo apt-get install gcc-multilib
- 
+  
   dub build -b release --verror --arch=x86
   strip "$target_path"
 }

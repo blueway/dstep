@@ -45,7 +45,7 @@ jobs:
       if: tag IS present
       d: ldc
       os: linux
-      env: LLVM_VERSION=10.0.0
+      env: LLVM_VERSION=8.0.0
       install: ./tools/download_llvm.d --dstep
       before_script: ./configure --llvm-path tmp/clang
       script: ./tools/build_release.sh
